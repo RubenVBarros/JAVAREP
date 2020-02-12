@@ -17,20 +17,23 @@ public class Banque extends UnicastRemoteObject implements BanqueInterface{
 
 	@Override
 	public void ajouter(String id, double somme) {
-		// TODO Stub de la méthode généré automatiquement
-		
+		c.setSolde(id,somme);
 	}
 
 	@Override
 	public void retirer(String id, double somme) {
-		// TODO Stub de la méthode généré automatiquement
-		
+		c.setSolde(id,somme);
 	}
 
 	@Override
 	public Position position(String id) {
-		// TODO Stub de la méthode généré automatiquement
-		return null;
+		return new Position(id,c.getSolde(id));
+		
+	}
+
+	@Override
+	public void creerCompte(String id, double somme) throws RemoteException {
+		c.addCompte(id,somme);
 	}
 	
 	
