@@ -8,8 +8,9 @@ public class Client {
 		try {
 			MotInterface obj = (MotInterface) Naming.lookup("rmi://localhost:8107/Mot");
 			obj.Execution();
-	} catch(Exception e) {
-		System.out.println("Mot Client exception: " + e);
+			
+		} catch(Exception e) {
+			System.out.println("Mot client exception" + e);
 		}
 
 	}

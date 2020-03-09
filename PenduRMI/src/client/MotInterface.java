@@ -1,9 +1,7 @@
 package client;
 
-import java.rmi.Remote;
-
-public interface MotInterface extends Remote{
-	void Pendu();
+public interface MotInterface {
+	void Pendu(String motadeviner);
 	void Execution();
-
+	
 }

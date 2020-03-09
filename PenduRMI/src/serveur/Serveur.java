@@ -13,9 +13,11 @@ public class Serveur {
 			LocateRegistry.createRegistry(port);
 			Naming.rebind("rmi://localhost:8107/PenduRMI", new Mot());
 			System.out.println("Serveur pret !");
-		} catch (Exception e) {
-			System.out.println("Serveur Ã©chec " + e);
+			
+		} catch(Exception e) {
+			System.out.println("Serveur échec " + e);
 		}
+
 	}
 
 }
